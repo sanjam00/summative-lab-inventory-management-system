@@ -25,7 +25,7 @@ def get_item(id):
   item = _provider.get_item(id)
   if not id:
     return jsonify({"error": "Item not found"}), 404
-  return jsonify(item), 200  
+  return jsonify(item.to_dict()), 200  
 
 if __name__ == "__main__":
   app.run(debug=True, port=5000)

@@ -5,18 +5,11 @@ Prof's example needs another class becuase it's an array of dictionaries.
 """
 from dataclasses import dataclass, asdict
 
+@dataclass
 class ProductInfo():
   product_name: str
   brands: str
   ingredients_text: str
-
-  # @classmethod
-  # def from_dict(cls, data):
-  #   return cls(
-  #     product_name = data.get("product_name", ''),
-  #     brands = data.get("brands", ''),
-  #     ingredients_text = data.get("ingredients_text", '')
-  #   )
 
   @classmethod
   def from_dict(cls, data):
@@ -24,10 +17,10 @@ class ProductInfo():
       return None
 
     return cls(
-      product_name=data.get("product_name", ''),
-      brands=data.get("brands", ''),
-      ingredients_text=data.get("ingredients_text", '')
-    )
+        product_name=data.get("product_name", ''),
+        brands=data.get("brands", ''),
+        ingredients_text=data.get("ingredients_text", '')
+      )
   
   def to_dict(self):
     return asdict(self)
