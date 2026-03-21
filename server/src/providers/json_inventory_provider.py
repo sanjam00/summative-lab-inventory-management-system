@@ -7,6 +7,12 @@ class JsonInventoryDataProvider():
     self._filename = filename
     self._items = []
 
+  def _initialize_empty_file(self):
+    # DO I NEED THIS METHOD???
+    # Initializes the json file with an empty list
+    with open(self.file_path, "w") as f:
+      json.dump({}, f)
+
   def load(self):
     # reads data from the filepath
     if not os.path.exists(self._filename):
@@ -30,3 +36,12 @@ class JsonInventoryDataProvider():
   
   def get_item(self, id):
     return next(item for item in self._items if item.id == id)
+  
+  def add( self, item):
+    pass
+
+  def update(self, item):
+    pass
+
+  def delete(self, id):
+    pass

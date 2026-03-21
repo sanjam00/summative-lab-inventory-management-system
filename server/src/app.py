@@ -27,5 +27,9 @@ def get_item(id):
     return jsonify({"error": "Item not found"}), 404
   return jsonify(item.to_dict()), 200  
 
+# # Register Routes
+# inventory_routes = InventoryRoutes(inventory_provider, detail_services)
+# inventory_routes.register(app)
+
 if __name__ == "__main__":
   app.run(debug=True, port=5000)

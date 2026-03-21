@@ -18,4 +18,4 @@ class StockItem():
     )
   
   def to_dict(self) -> dict:
-    return asdict(self)
+    return asdict(self) 
