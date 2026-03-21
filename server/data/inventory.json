@@ -1,7 +1,11 @@
 [
   {
-  "quantity": 1,
   "id": 1,
+  "name": "Organic Almond Milk",
+  "description": "Dairy-free milk alternative",
+  "price": 3.99,
+  "quantity": 1,
+  "category": "beverage",
   "product": {
     "product_name": "Organic Almond Milk",
     "brands": "Silk",

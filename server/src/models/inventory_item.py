@@ -1,5 +1,5 @@
 
-class InvenetoryItem:
+class InventoryItem:
   def __init__(self, id=None, name="", description="", price=0.0, quantity=0, category=None):
     self.id = id
     self.name = name
@@ -7,10 +7,10 @@ class InvenetoryItem:
     self.price = price
     self.quantity = quantity
     self.category = category
-    self.product_details = {}
+    self.product = {}
 
   def __str__(self):
-    return f"InventoryItem(id={self.id}, name='{self.name})', quantity={self.quantity}, price=${self.price}, description='{self.description}', category={self.ccategory}, product details='{self.product_details}"
+    return f"InventoryItem(id={self.id}, name='{self.name}', quantity={self.quantity}, price=${self.price}, description='{self.description}', category={self.category}, product={self.product})"
 
   def to_dict(self):
     return {
@@ -20,7 +20,7 @@ class InvenetoryItem:
       "price": self.price,
       "quantity": self.quantity,
       "category": self.category,
-      "product_details": self.product_details
+      "product": self.product
     }
   
   @classmethod
@@ -31,7 +31,7 @@ class InvenetoryItem:
       description=data.get("description", ""),
       price=data.get("price", 0.0),
       quantity=data.get("quantity", 0),
-      category=data.get("category", )
+      category=data.get("category", None)
     )
-    item.product_details = data.get("product_details", {})
+    item.product = data.get("product") or {}
     return item

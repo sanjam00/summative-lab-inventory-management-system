@@ -11,7 +11,7 @@ _provider = JsonInventoryDataProvider(DATA_PATH)
 
 # GET /inventory - GET all available products
 @app.route("/inventory")
-def get_inventory():
+def get_all():
   _provider.load()
 
   inventory = _provider.all_inventory()

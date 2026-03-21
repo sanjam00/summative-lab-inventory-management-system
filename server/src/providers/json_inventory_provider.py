@@ -1,6 +1,7 @@
 import os
 import json
-from models.stock import StockItem
+# from models.stock import StockItem
+from models.inventory_item import InventoryItem
 
 class JsonInventoryDataProvider():
   def __init__(self, filename):
@@ -17,13 +18,11 @@ class JsonInventoryDataProvider():
     # reads data from the filepath
     if not os.path.exists(self._filename):
       self._items = []
+      return
 
     with open(self._filename, "r", encoding="utf-8") as f:
       data = json.load(f)
-
-      self._items = [StockItem.from_dict(item) for item in data]
-
-    print(self._items)
+      self._items = [InventoryItem.from_dict(item) for item in data]
 
   def save(self):
     data = [item.to_dict() for item in self._items]
@@ -37,11 +36,13 @@ class JsonInventoryDataProvider():
   def get_item(self, id):
     return next(item for item in self._items if item.id == id)
   
-  def add( self, item):
-    pass
+  def add_item(self, item):
+    self._items.append(item)
+    self.save()
 
+  def delete_item(self, id):
+    self._items = [item for item in self._items if item.id != id]
+    self.save()
+    
   def update(self, item):
-    pass
-
-  def delete(self, id):
     pass
