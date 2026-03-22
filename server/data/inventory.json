@@ -33,5 +33,31 @@
       "ingredients_text": "Sugar, Wheat Rour, Skimmed Cow's Milk Powder, Non-Hydrogenated Vegetable Oils (Palm Kernel, Shea, Palm), Cocoa Butter, Cocoa Mass, Whey Powder, Milk Fat, Cocoa Powder, Emulsifier from Plant Drigin (Sunflower lecithin), Raising agent (Sodium Bicarbonatal Contains Milk including Lactose & Gluten from Wheat, may contain Soy & Nuts.",
       "product_name": "Kitkat"
     }
+  },
+  {
+    "id": 12,
+    "name": "Test Item",
+    "description": "Testing",
+    "price": 5.99,
+    "quantity": 2,
+    "category": "test",
+    "product": {
+      "product_name": "Training Supplier Test Item",
+      "brands": "",
+      "ingredients_text": "Chicken stock, enriched pasta (wheat flour, egg whites, niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), chicken meat, contains less than 2% of: carrots, chicken fat, salt, water, cornstarch, flavoring, yeast extract, modified food starch, chicken broth*, cane sugar, onions*, soy protein isolate, sodium phosphate, chicken*, onion extract, garlic extract. *dehydrated"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Test Item",
+    "description": "Testing",
+    "price": 5.99,
+    "quantity": 2,
+    "category": "test",
+    "product": {
+      "product_name": "Training Supplier Test Item",
+      "brands": "",
+      "ingredients_text": "Chicken stock, enriched pasta (wheat flour, egg whites, niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), chicken meat, contains less than 2% of: carrots, chicken fat, salt, water, cornstarch, flavoring, yeast extract, modified food starch, chicken broth*, cane sugar, onions*, soy protein isolate, sodium phosphate, chicken*, onion extract, garlic extract. *dehydrated"
+    }
   }
 ]

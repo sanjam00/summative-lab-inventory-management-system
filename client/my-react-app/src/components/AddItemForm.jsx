@@ -54,7 +54,7 @@ export default function AddItemForm({ onAddItem, inventory, setInventory, showNo
     <div className="add-item-container">
       <h3>Add Item</h3>
 
-      <button onClick={() => setIsOpen(prev => !prev)} style={{ marginBottom: "8px" }}>
+      <button className="add-item-btn" onClick={() => setIsOpen(prev => !prev)} style={{ marginBottom: "8px" }}>
         {isOpen ? "Close Form" : "Open Form"}
       </button>
 

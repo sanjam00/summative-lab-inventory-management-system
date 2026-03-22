@@ -34,8 +34,8 @@ class JsonInventoryDataProvider():
     return self._items
   
   def get_item(self, id):
-    return next(item for item in self._items if item.id == id)
-  
+    return next((item for item in self._items if item.id == id), None)
+
   def add_item(self, item):
     # generate id
     max_id = max([i.id for i in self._items], default=0)

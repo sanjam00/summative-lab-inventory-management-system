@@ -95,6 +95,14 @@ button.edit-btn:hover {
   background-color: #2980b9;
 }
 
+button.add-item-btn {
+  background-color: #d8d8d8;
+}
+
+button.add-item-btn:hover {
+  background-color: #ccc;
+}
+
 .item-card {
   background: white;
   padding: 15px;
