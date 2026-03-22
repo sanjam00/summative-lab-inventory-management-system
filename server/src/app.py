@@ -72,12 +72,16 @@ def update_item(id):
 # DELETE /inventory/<id>
 @app.route("/inventory/<int:id>", methods=["DELETE"])
 def delete_item(id):
-  original_len = len(_provider._items)
+  _provider.load()
 
-  _provider._items = [i for i in _provider._items if i.id != id]
+  item = _provider.get_item(id)
 
-  if len(_provider._items) == original_len:
+  if not item:
     return jsonify({"error": "Item not found"}), 404
+
+  _provider.delete_item(id)
+
+  return jsonify({"message": "Item deleted"}), 200
 
 # # Register Routes
 # inventory_routes = InventoryRoutes(inventory_provider, detail_services)

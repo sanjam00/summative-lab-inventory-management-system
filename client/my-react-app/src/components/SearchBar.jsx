@@ -5,7 +5,7 @@ export default function SearchBar({ onSearch , props}) {
 
   function handleChange(e) {
     const value = e.target.value;
-    setQuery(value);
+    setQuery(value); // updates search bar as user is typing
     onSearch(value); // send value to parent
   }
 
