@@ -8,7 +8,7 @@ export default function Notification({ message, type }) {
   };
 
   return (
-    <div style={{
+    <div className={`notification ${type}`} style={{
       position: "fixed",
       top: "20px",
       left: "50%",

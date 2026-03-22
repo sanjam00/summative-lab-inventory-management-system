@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 export default function AddItemForm({ onAddItem, inventory, setInventory, showNotification, props}) {
+  const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -52,6 +53,12 @@ export default function AddItemForm({ onAddItem, inventory, setInventory, showNo
   return(
     <div className="add-item-container">
       <h3>Add Item</h3>
+
+      <button onClick={() => setIsOpen(prev => !prev)} style={{ marginBottom: "8px" }}>
+        {isOpen ? "Close Form" : "Open Form"}
+      </button>
+
+      {isOpen && (
       <form onSubmit={handleSubmit} >
 
         <label htmlFor="name-input">Name:</label>
@@ -71,6 +78,8 @@ export default function AddItemForm({ onAddItem, inventory, setInventory, showNo
 
         <button type="submit" id="addItemSubmit">Add Item</button>
       </form>
+
+      )}
     </div>
   )
 }

@@ -16,7 +16,6 @@ export default function SearchBar({ onSearch , props}) {
         placeholder="Search inventory..."
         value={query}
         onChange={handleChange}
-        style={{ padding: "8px", width: "300px" }}
       />
     </div>
     );
