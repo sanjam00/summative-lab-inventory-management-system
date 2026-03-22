@@ -2,12 +2,25 @@
   {
   "id": 1,
   "name": "Organic Almond Milk",
-  "description": "Dairy-free milk alternative",
+  "description": "Organic Dairy-free milk alternative",
   "price": 3.99,
   "quantity": 1,
   "category": "beverage",
   "product": {
     "product_name": "Organic Almond Milk",
+    "brands": "Silk",
+    "ingredients_text": "Filtered water, almonds, cane sugar, ..."
+  }
+},
+{
+  "id": 2,
+  "name": "Almond Milk",
+  "description": "Dairy-free milk alternative",
+  "price": 3.99,
+  "quantity": 1,
+  "category": "beverage",
+  "product": {
+    "product_name": "Almond Milk",
     "brands": "Silk",
     "ingredients_text": "Filtered water, almonds, cane sugar, ..."
   }

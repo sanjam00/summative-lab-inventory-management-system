@@ -37,12 +37,16 @@ class JsonInventoryDataProvider():
     return next(item for item in self._items if item.id == id)
   
   def add_item(self, item):
+    # generate id
+    max_id = max([i.id for i in self._items], default=0)
+    item.id = max_id + 1
+
     self._items.append(item)
     self.save()
 
   def delete_item(self, id):
     self._items = [item for item in self._items if item.id != id]
     self.save()
-    
+
   def update(self, item):
     pass
