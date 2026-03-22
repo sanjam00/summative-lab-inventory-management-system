@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from providers.json_inventory_provider import JsonInventoryDataProvider
 from models.inventory_item import InventoryItem
-
+from services.product_api import fetch_product_details
 
 app = Flask(__name__)
 CORS(app)
@@ -39,6 +39,9 @@ def add_item():
 
   data = request.json
   item = InventoryItem.from_dict(data)
+
+  product_data = fetch_product_details(item.name)
+  item.product = product_data
 
   _provider.add_item(item)
 

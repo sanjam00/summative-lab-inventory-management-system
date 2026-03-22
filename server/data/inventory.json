@@ -1,28 +1,50 @@
 [
   {
-  "id": 1,
-  "name": "Organic Almond Milk",
-  "description": "Organic Dairy-free milk alternative",
-  "price": 3.99,
-  "quantity": 1,
-  "category": "beverage",
-  "product": {
-    "product_name": "Organic Almond Milk",
-    "brands": "Silk",
-    "ingredients_text": "Filtered water, almonds, cane sugar, ..."
+    "id": 1,
+    "name": "Organic Almond Milk",
+    "description": "Organic Dairy-free milk alternative",
+    "price": 3.99,
+    "quantity": 1,
+    "category": "beverage",
+    "product": {
+      "product_name": "Organic Almond Milk",
+      "brands": "Silk",
+      "ingredients_text": "Filtered water, almonds, cane sugar, ..."
+    }
+  },
+  {
+    "id": 2,
+    "name": "Almond Milk",
+    "description": "Dairy-free milk alternative",
+    "price": 3.99,
+    "quantity": 1,
+    "category": "beverage",
+    "product": {
+      "product_name": "Almond Milk",
+      "brands": "Silk",
+      "ingredients_text": "Filtered water, almonds, cane sugar, ..."
+    }
+  },
+  {
+    "id": 3,
+    "name": "Cuties",
+    "description": "small mandarins",
+    "price": "4.99",
+    "quantity": "f1",
+    "category": "fruit",
+    "product": {}
+  },
+  {
+    "id": 4,
+    "name": "KitKat",
+    "description": "mini chocoloate coated wafer",
+    "price": "3.99",
+    "quantity": "2",
+    "category": "candy",
+    "product": {
+      "product_name": "KitKat Cereal",
+      "brands": "Nestl\u00e9",
+      "ingredients_text": "31,4% VOLLKORNWEIZENMEHL, Maisgrie\u00df, Zucker, Dextrose, Palm\u00f6l, WEIZENMEHL, 5,4% Kakaopulver*, Glukosesirup, WEIZENST\u00c4RKE, MAGERMILCHPULVER, Sonnenblumen\u00f6l, Calciumcarbonat, GERSTENMALZEXTRAKT, fettarmes Kakaopulver*, nat\u00fcrliche Aromen, Kakaobutter*, Salz, Kakaomasse*, Emulgator (Lecithine), MOLKENERZEUGNIS, BUTTERREINFETT, Antioxidationsmittel (stark tocopherolhaltige Extrakte), Eisen, Niacin, Pantothens\u00e4ure, Vitamin B6, Riboflavin (Vit. B2), Fols\u00e4ure.Kann N\u00dcSSE enthalten. *Rainforest Alliance-zertifiziert."
+    }
   }
-},
-{
-  "id": 2,
-  "name": "Almond Milk",
-  "description": "Dairy-free milk alternative",
-  "price": 3.99,
-  "quantity": 1,
-  "category": "beverage",
-  "product": {
-    "product_name": "Almond Milk",
-    "brands": "Silk",
-    "ingredients_text": "Filtered water, almonds, cane sugar, ..."
-  }
-}
 ]
