@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import SearchBar from './components/SearchBar'
-import ItemCard from './components/ItemCard'
 import Header from './components/Header'
 import AddItemForm from './components/AddItemForm'
+import Notification from './components/Notification'
 import ItemList from './components/ItemList'
 
 function App() {
 
   const [inventory, setInventory] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [notification, setNotification] = useState(null)
 
   useEffect(() => {
     fetch("http://localhost:5000/inventory")
@@ -35,6 +36,9 @@ function App() {
       method: "DELETE"
     }).then(() => {
       setInventory(prev => prev.filter(item => item.id !== id));
+      showNotification("Item deleted successfully!", "success");
+    }).catch (() => {
+      showNotification("Failed to add item", "error");
     });
   }
 
@@ -54,13 +58,24 @@ function App() {
       });
   }
 
+  function showNotification(message, type = "info") {
+    setNotification({ message, type });
+
+    setTimeout(() => {
+      setNotification(null);
+    }, 3000);
+  }
+
   return (
     <div>
       <Header />
 
       <SearchBar onSearch={handleSearch} />
 
-      <AddItemForm onAddItem={handleNewItem} inventory={inventory} setInventory={setInventory} />
+      <AddItemForm onAddItem={handleNewItem} inventory={inventory} setInventory={setInventory} showNotification={showNotification} />
+
+      <Notification message={notification?.message} type={notification?.type} />
+      
       <h1>Inventory</h1>
 
       <ItemList items={filteredItems} onDelete={handleDelete} onUpdate={handleUpdate} />

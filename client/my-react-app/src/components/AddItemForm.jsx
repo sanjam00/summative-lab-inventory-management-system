@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function AddItemForm({ onAddItem, inventory, setInventory, props}) {
+export default function AddItemForm({ onAddItem, inventory, setInventory, showNotification, props}) {
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -34,6 +34,7 @@ export default function AddItemForm({ onAddItem, inventory, setInventory, props}
       .then(newItem => {
         console.log(newItem)
         onAddItem(newItem)
+        showNotification("Item added successfully!", "success");
         setInventory([...inventory, newItem]);
         setFormData({
           name: "",
@@ -42,6 +43,9 @@ export default function AddItemForm({ onAddItem, inventory, setInventory, props}
           quantity: "",
           category: ""
         });
+      })
+      .catch(() => {
+        showNotification("Failed to add item", "error");
       });
   };
   
