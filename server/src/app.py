@@ -53,19 +53,10 @@ def update_item(id):
   _provider.load()
 
   data = request.json
-  item = _provider.get_item(id)
+  item = _provider.update_item(id, data)
 
   if not item:
     return jsonify({"error": "Item not found"}), 404
-
-  item.name = data.get("name", item.name)
-  item.description = data.get("description", item.description)
-  item.price = data.get("price", item.price)
-  item.quantity = data.get("quantity", item.quantity)
-  item.category = data.get("category", item.category)
-  item.product = data.get("product", item.product)
-
-  _provider.save()
 
   return jsonify(item.to_dict()), 200
 
