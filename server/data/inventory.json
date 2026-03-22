@@ -48,7 +48,20 @@
     }
   },
   {
-    "id": 6,
+    "id": 7,
+    "name": "KitKat",
+    "description": "choco wafer",
+    "price": "2.99",
+    "quantity": "3",
+    "category": "candy",
+    "product": {
+      "product_name": "KitKat Cereal",
+      "brands": "Nestl\u00e9",
+      "ingredients_text": "31.4% whole wheat flour, corn semolina, sugar, dextrose, palm oil, wheat flour, 5.4% cocoa powder*, glucose syrup, wheat starch, skimmed milk powder, sunflower oil, calcium carbonate, barley malt extract, low-fat cocoa powder*, natural flavors, cocoa butter*, salt, cocoa mass*, emulsifier (lecithins), whey product, clarified butter, antioxidant (extracts high in tocopherols), iron, niacin, pantothenic acid, vitamin b6, riboflavin (vit, b2), folic acid, may contain nuts, *rainforest alliance certified,"
+    }
+  },
+  {
+    "id": 8,
     "name": "Red Bell Pepper",
     "description": "",
     "price": "1.59",
@@ -57,7 +70,33 @@
     "product": {
       "product_name": "Poivrons grill\u00e9s",
       "brands": "Freshona",
-      "ingredients_text": "61,5% poivron rouge, eau, vinaigre d'alcool, sucre, sel, extrait d\u2019\u00e9pices"
+      "ingredients_text": "Red bell peppers, water, white wine vinegar, sugar, salt, natural flavor."
+    }
+  },
+  {
+    "id": 9,
+    "name": "Cuties",
+    "description": "Mandarins",
+    "price": "5.99",
+    "quantity": "4",
+    "category": "Produce",
+    "product": {
+      "product_name": "Cuties",
+      "brands": "",
+      "ingredients_text": ""
+    }
+  },
+  {
+    "id": 10,
+    "name": "Nutella",
+    "description": "hazlenut spread",
+    "price": "6",
+    "quantity": "6",
+    "category": "",
+    "product": {
+      "product_name": "Nutella",
+      "brands": "Nutella",
+      "ingredients_text": "sugar, palm oil, hazelnuts 13%, low-fat cocoa 7.4%, skimmed milk powder 6.6%, whey powder, emulsifiers: lecithins [soya], vanillin, gluten-free,"
     }
   }
 ]

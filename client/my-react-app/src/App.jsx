@@ -69,29 +69,3 @@ function App() {
 }
 
 export default App
-
-{/* place holder item mapping, will implement component later */}
-{/* {inventory.length === 0 ? (
-  <p>No items found</p>
-) : (
-    inventory
-      .filter(item =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-      .map(item => (
-    <div key={item.id} style={{ border: "1px solid gray", margin: "10px", padding: "10px" }}>
-      <h2>{item.name}</h2>
-      <p>{item.description}</p>
-      <p><strong>Price:</strong> ${item.price}</p>
-      <p><strong>Quantity:</strong> {item.quantity}</p>
-      <p><strong>Category:</strong> {item.category}</p>
-
-      {item.product && (
-        <div>
-          <p><strong>Brand:</strong> {item.product.brands}</p>
-          <p><strong>Ingredients:</strong> {item.product.ingredients_text}</p>
-        </div>
-      )}
-    </div>
-  ))
-)} */}

@@ -48,5 +48,10 @@ class JsonInventoryDataProvider():
     self._items = [item for item in self._items if item.id != id]
     self.save()
 
-  def update(self, item):
-    pass
+  # def update(self, item):
+  #   item.name = data.get("name", item.name)
+  # item.description = data.get("description", item.description)
+  # item.price = data.get("price", item.price)
+  # item.quantity = data.get("quantity", item.quantity)
+  # item.category = data.get("category", item.category)
+  # item.product = data.get("product", item.product)
